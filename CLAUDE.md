@@ -71,6 +71,7 @@ The generation prompt (`src/lib/prompts/generation.tsx`) instructs Claude to:
 - JWT-based auth via `jose`, stored in an httpOnly cookie (`auth-token`)
 - `src/lib/auth.ts` is server-only
 - Prisma + SQLite (`prisma/dev.db`); the Prisma client is generated to `src/generated/prisma`
+- The database schema is defined in `prisma/schema.prisma` — reference it to understand the structure of stored data
 - **Project model**: stores `messages` (JSON string) and `data` (serialized VFS JSON string)
 - Anonymous users get a session-storage tracker (`src/lib/anon-work-tracker.ts`) so their work can be saved on sign-up
 
